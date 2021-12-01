@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    tools:context=".view.OtherFragment">
+
+    <TextView
+        android:id="@+id/id_header"
+        style="@style/Header"
+        android:layout_marginStart="8dp"
+        android:text="@string/id_header_label"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/latitude_header"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/latitude_header"
+        style="@style/Header"
+        android:layout_below="@+id/id_header"
+        android:layout_marginStart="8dp"
+        android:text="@string/latitude_header_label"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/longitude_header"
+        app:layout_constraintHorizontal_weight="5"
+        app:layout_constraintStart_toEndOf="@+id/id_header"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/longitude_header"
+        style="@style/Header"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="8dp"
+        android:text="@string/longitude_header_label"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="5"
+        app:layout_constraintStart_toEndOf="@+id/latitude_header"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <View
+        android:id="@+id/divider"
+        style="@style/Divider"
+        android:layout_marginTop="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/longitude_header" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:name="com.example.omarapplication.CustomerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        android:layout_marginTop="8dp"
+        android:scrollbars="vertical"
+        app:layoutManager="LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        tools:layout_editor_absoluteX="16dp"
+        tools:listitem="@layout/fragment_other_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

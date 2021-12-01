@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TestOEMM</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mapsViewButton_label">Maps</string>
+    <string name="otherButton_label">Other</string>
+    <string name="retrieveButton_label">Retrieve data</string>
+    <string name="id_header_label">Id</string>
+    <string name="latitude_header_label">Latitude</string>
+    <string name="longitude_header_label">Longitude</string>
+</resources>
